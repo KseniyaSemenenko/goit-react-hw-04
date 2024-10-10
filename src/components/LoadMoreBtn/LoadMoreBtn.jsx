@@ -1,5 +1,10 @@
-export default function LoadMoreBtn() {
+import css from './LoadMoreBtn.module.css'
+
+export default function LoadMoreBtn({changePage}) {
     return (
-        <button type="submit">Load more</button>
+        <div className={css.loadMoreContainer}>
+            <button onClick={changePage} className={css.loadMoreBtn} type="submit">Load more</button>
+        </div>
+        
     )
 }

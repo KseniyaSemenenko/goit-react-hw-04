@@ -1,5 +1,6 @@
+import css from './ErrorMessage.module.css'
 export default function ErrorMessage() {
     return (
-        <p>Oppps....Something went wrong!</p>
+        <p className={css.error}>Oppps....Something went wrong!</p>
     )
 }

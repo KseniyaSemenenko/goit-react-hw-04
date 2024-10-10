@@ -1,12 +1,15 @@
 import ImageCard from "../ImageCard/ImageCard";
-
-export default function ImageGallery() {
+import css from './ImageGallery.module.css'
+export default function ImageGallery({search, onImageClick}) {
     return (
-        <ul>
-	{/* Набір елементів списку із зображеннями */}
-	<li>
-		<ImageCard />
-	</li>
+        <ul className={css.listPhoto}>
+			{Array.isArray(search) && search.map((item) => {
+				return (
+					<li className={css.listPhotoItem} key={item.id}>
+						<ImageCard item={item} onClick={()=>{onImageClick(item.urls.regular)}} />
+					</li>);
+	})}
+	
 </ul>
 
     )
