@@ -17,7 +17,6 @@ export default function SearchBar({ onHandleSubmit }) {
       return;
     }
     onHandleSubmit(inputValue);
-    console.log(inputValue);
 
     form.reset();
   };
