@@ -68,7 +68,7 @@ const App = () => {
     <div>
       <SearchBar onHandleSubmit={handleSubmit} />
       <Toaster />
-      <ImageGallery search={search} onImageClick={openModal} />
+      {searchValue && (!search || search.length === 0) ? <p className={css.textNotFound}>Nothing was found for your request!🤷‍♂️ Try again😉</p> :<ImageGallery search={search} onImageClick={openModal} />}
       {loading && (
         <div className={css.loading}>
           <Loader />
